@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex001</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(173, 94, 247);
+      }
+
+      .box {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box h1 {
+        font-size: 4rem;
+        color: yellow;
+      }
+
+      .box p {
+        font-size: 1.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Hello World!</h1>
+      <p>Me livrei da maldição...</p>
+    </div>
+
+    <script>
+      let nome = prompt('Qual é o seu nome?')
+      alert (`Olá ${nome}, tudo bem?`)
+    </script>
+  </body>
+</html>
