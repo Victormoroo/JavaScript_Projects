@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <style>
+      body {
+        background-color: #7d7d7d;
+        color: #ffffff;
+        font: normal 18pt Arial;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1 id="banner">Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p name="p2">Aprendendo <b>DOM</b> em JavaScript</p>
+    <h2 class="d">Exemplos de DOM</h2>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+      // Selecionando por Tag
+      let p1 = document.getElementsByTagName('p')[0]
+      document.write('Está escrito assim: ' + p1.innerText) // o innerHTML pega a formatacao (caso tenha algo escrito em negrito por exemplo, vai vir junto)
+      p1.style.color = 'red'
+
+      let corpo = document.body
+      corpo.style.background = '#2d2d2d'
+      
+      // Selecionando por ID
+      let div = document.getElementById('msg') // posso utilizar o querySelector() aqui tambem, pois o ID seria um seletor
+      div.style.background = 'red'
+      div.innerText = 'Aguardando...'
+
+      // Selecionando por Nome
+      document.getElementsByName('p2')[0].style.color = 'blue'
+
+      // Selecionando por Classe
+      document.getElementsByClassName('d')[0].style.cursor = 'pointer' // poderia tambem utilizar o querySelector por classe aqui
+
+      // Selecionando por Seletor
+      let title = document.querySelector('#banner')
+      title.style.color = 'green'
+
+    </script>
+  </body>
+</html>
